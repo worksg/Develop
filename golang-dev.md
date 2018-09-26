@@ -9,3 +9,5 @@
 1. [Go语言高级编程](https://github.com/chai2010/advanced-go-programming-book)
 
 # 团队开发
+1. [Effective Go](https://golang.org/doc/effective_go.html)
+2. [CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)
