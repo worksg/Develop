@@ -13,3 +13,6 @@
 
 # 团队开发
 1. [代码规范](https://zh-google-styleguide.readthedocs.io/en/latest/google-python-styleguide/contents/)
+
+# 扩展教程
+1. [Welcome to Python for Visual Studio Code](https://donjayamanne.github.io/pythonVSCodeDocs/docs/)
