@@ -5,6 +5,7 @@
 # 入门书籍
 1. [Python官方手册](https://docs.python.org)
 2. Python学习手册(第4版)
+3. [《Python Cookbook》 3rd Edition](https://github.com/yidao620c/python3-cookbook)
 
 # 进阶书籍
 1. 流畅的Python
