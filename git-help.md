@@ -44,6 +44,8 @@
     git tag -a v1.0 -m '' / git tag v1.0
     git push origin v1.0
 
+    git push origin --tags # push all tags
+
 ### Delete Tag
     git tag -d v1.0
     git push origin :v1.0
