@@ -41,7 +41,7 @@
 # Tag
 
 ### Add Tag
-    git tag -a v1.0 -m '' / git tag v1.0
+    git tag v1.0 / git tag -a v1.0 / git tag -a v1.0 -m ''
     git push origin v1.0
 
     git push origin --tags # push all tags
@@ -52,6 +52,7 @@
 
 ### List Tag
     git tag -l
+    git tag -l 'v1.*'
 
 ### Show Tag
     git show v1.0
