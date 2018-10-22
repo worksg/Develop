@@ -81,6 +81,15 @@ git checkout BRANCHNAME
 git fetch upstream
 git checkout -b upstreamBranch upstream/master
 ```
+
+# 创建空白分支
+```bash
+git checkout --orphan newbranch
+git rm -rf .
+git commit -am "Initial Commit"
+git branch -a
+```
+
 # fix windows line encoding in git
 
 - Default Config
