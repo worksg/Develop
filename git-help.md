@@ -18,16 +18,16 @@
 # Change Repository URL
     git remote set-url origin https://github.com/your/develop-new.git
 
-# common git command
+# Common git command
 
     git add file1 / git add -A -- file1
     git status
-    git stash save -- myStashTag
+    git stash save -- myStashTag / git stash save -u -- myStashTag
     git stash list
     git stash pop stash@{0} / git stash pop
     git reset HEAD -- file1
 
-    git commit -m "add file1"
+    git commit -m "add file1" / git commit -S -m "add file1"
     git log
     git reset HEAD~
 
@@ -41,21 +41,24 @@
 # Tag
 
 ### Add Tag
-    git tag v1.0 / git tag -a v1.0 / git tag -a v1.0 -m ''
-    git push origin v1.0
+    git tag v1.0.0 / git tag -a v1.0.0 / git tag -a v1.0.0 -m '' / git tag -s -a v1.0.0 -m '' / git tag -s -a v1.0.0 -m '' <commit id>
+    git push origin v1.0.0
 
     git push origin --tags # push all tags
 
 ### Delete Tag
-    git tag -d v1.0
-    git push origin :v1.0
+    git tag -d v1.0.0
+    git push origin :v1.0.0
 
 ### List Tag
     git tag -l
-    git tag -l 'v1.*'
+    git tag -l 'v1.0.*'
 
 ### Show Tag
-    git show v1.0
+    git show v1.0.0
+
+### checkout Tag
+    git checkout v1.0.0
 
 # Squash Pull Request On Github
     https://stackoverflow.com/questions/9994093/automatic-merge-of-pull-requests-on-github-without-the-merge-bubble
@@ -86,11 +89,35 @@ git checkout -b upstreamBranch upstream/master
 ```bash
 git checkout --orphan newbranch
 git rm -rf .
+#... Add some files/folders, then
 git commit -am "Initial Commit"
 git branch -a
 ```
 
-# fix windows line encoding in git
+# 保护分支说明 
+
+1. it prevents its creation, if not already created, from everybody except users with Maintainer permission
+2. it prevents pushes from everybody except users with Maintainer permission
+3. it prevents anyone from force pushing to the branch
+4. it prevents anyone from deleting the branch
+
+## About force push
+```bash
+git push <remote> <branch> --force
+# Or
+git push <remote> <branch> -f
+```
+> NOTE:
+> 
+> You only force a push when you need to replace the remote history by your local history.  
+> This happens when you rewrite the local history.
+
+> Warning:
+> 
+> force-pushing will overwrite the remote branch with the state of your local one.
+> Warning: be cautious about amending commits that you have already shared with other people.
+
+# Fix windows line encoding in git
 
 - Default Config
 
