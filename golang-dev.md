@@ -33,7 +33,7 @@
         git clone https://github.com/golang/lint %GOPATH%/src/github.com/golang/lint
 
         #vscode-go
-        go get -u -v github.com/derekparker/delve/cmd/dlv
+        go get -u -v github.com/go-delve/delve/cmd/dlv
         go get -u -v github.com/ramya-rao-a/go-outline
         go get -u -v github.com/acroca/go-symbols
         go get -u -v github.com/mdempsky/gocode
