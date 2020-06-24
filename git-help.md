@@ -13,7 +13,8 @@
     git fetch upstream
 
 ### 合并上游分支最新的代码到你的主分支中
-    git rebase/merge upstream/master
+    git rebase upstream/master
+    git merge upstream/master
 
 # Change Repository URL
     git remote set-url origin https://github.com/your/develop-new.git
@@ -37,7 +38,8 @@
     git push origin :dev / git push origin --delete dev
 
     git checkout -- file1 # 取消file1在工作区的所有更改
-
+    git checkout -- . # 取消工作区的所有更改
+    
 # Tag
 
 ### Add Tag
@@ -139,6 +141,11 @@ git push <remote> <branch> -f
 ```bash
 git config --global core.autocrlf input
 git config --global core.safecrlf warn
+```
+
+### 忽略文件权限值修改
+```bash
+git config --global core.fileMode false
 ```
 
 ### vs-code config
