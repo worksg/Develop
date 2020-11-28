@@ -172,3 +172,14 @@ git config --global core.fileMode false
 ### Linux / Windows(MINGW64)
     export http_proxy=http://localhost:1080
     export https_proxy=http://localhost:1080
+
+### Global Git Proxy
+    git config --global http.proxy 'http://127.0.0.1:10809'
+    git config --global https.proxy 'http://127.0.0.1:10809'
+    # OR
+    git config --global http.proxy 'socks5://<host>:<port>'
+    git config --global https.proxy 'socks5://<host>:<port>'
+    
+    # Disable proxy
+    git config --global --unset http.proxy
+    git config --global --unset https.proxy
