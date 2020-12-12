@@ -70,7 +70,7 @@
 # 本地合并远程请求分支
 
 ```bash
-# github
+# github / gitea
 git fetch origin pull/ID/head:BRANCHNAME
 git checkout BRANCHNAME
 ```
@@ -177,8 +177,8 @@ git config --global core.fileMode false
     git config --global http.proxy http://127.0.0.1:10809
     git config --global https.proxy http://127.0.0.1:10809
     # OR
-    git config --global http.proxy socks5://<host>:<port>
-    git config --global https.proxy socks5://<host>:<port>
+    git config --global http.proxy socks5://<host>:<port> / socks5h://<host>:<port>
+    git config --global https.proxy socks5://<host>:<port> / socks5h://<host>:<port>
     
     # Disable proxy
     git config --global --unset http.proxy
